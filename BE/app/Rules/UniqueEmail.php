@@ -13,7 +13,6 @@ class UniqueEmail implements Rule
 
     public function passes($attribute, $value)
     {
-        // Check if the email is unique in the users table
         return !User::where('email', $value)->exists();
     }
 
