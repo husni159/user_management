@@ -5,7 +5,7 @@
 <p>Before viewing the output on your local system, make sure you have installed node and npm.</p>
 
 <p>After cloning the repository from GitHub into a directory </p>
-<p>To preview the output, navigate to user_management/BE directory in your terminal and execute the following commands initially:</p>
+<p>Navigate to user_management/BE directory in your terminal and execute the following commands initially:</p>
 
 <code>php artisan serve</code>
 
@@ -15,7 +15,7 @@
 
 <code>php artisan migrate</code>
 
-<p>navigate to user_management/FE directory in your terminal and execute the following commands initially:</p>
+<p>To preview the output, navigate to user_management/FE directory in your terminal and execute the following commands initially:</p>
 
 <code>npm start</code>
 
