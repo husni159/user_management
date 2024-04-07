@@ -1,25 +1,27 @@
 <?php
 
 namespace App\Providers;
-use App\Services\CustomerInjectionService;
+
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
 {
     /**
      * Register any application services.
+     *
+     * @return void
      */
-    public function register(): void
+    public function register()
     {
-        $this->app->bind(CustomerInjectionService::class, function ($app) {
-            return new CustomerInjectionService();
-        });
+        //
     }
 
     /**
      * Bootstrap any application services.
+     *
+     * @return void
      */
-    public function boot(): void
+    public function boot()
     {
         //
     }

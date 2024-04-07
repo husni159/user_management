@@ -7,7 +7,9 @@ use App\Traits\HttpResponses;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
-use App\Rules\UniqueEmail;
+// use App\Rules\UniqueEmail;
+use App\Http\Requests\CreateUserRequest;
+
 use Exception;
 
 class UserController extends Controller
@@ -40,15 +42,15 @@ class UserController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function addUser(Request $request)
+    public function addUser(CreateUserRequest $request)
     {
         try{
-            $request->validate([
-                'email' => ['required', 'email', new UniqueEmail],
-            ]);
+            // $request->validate([
+            //     'email' => ['required', 'email', new UniqueEmail],
+            // ]);
 
             $user = User::create([
-                'name'      => $request->name,
+                'name'      => $request->fullName,
                 'email'     => $request->email,
                 'role'      => $request->role
             ]);
